@@ -2,9 +2,11 @@
 
 🚀 Tecnologias UtilizadasCypress - Framework de testes E2EJavaScript / Node.js - Linguagem e ambiente de execução
 
-📋 Pré-requisitosCertifique-se de ter instalado em sua máquina:Node.js (versão 14 ou superior)npm (geralmente já vem com o Node.js)
+📋 Pré-requisitos
+Certifique-se de ter instalado em sua máquina:Node.js (versão 14 ou superior)npm (geralmente já vem com o Node.js)
 
-⚙️ Como Executar o ProjetoClone o repositório:bashgit clone https://github.com
+⚙️ Como Executar o ProjetoClone o repositório:
+bashgit clone https://github.com
 cd login-orangehrm
 
 Instale as dependências:
