@@ -1,4 +1,4 @@
-Cypress Automation - OrangeHRM LoginProjeto de estudo desenvolvido com Cypress para automação de testes E2E (End-to-End) do fluxo de login da aplicação de demonstração do OrangeHRM.
+🤖 Cypress Automation - OrangeHRM LoginProjeto de estudo desenvolvido com Cypress para automação de testes E2E (End-to-End) do fluxo de login da aplicação de demonstração do OrangeHRM.
 
 🚀 Tecnologias UtilizadasCypress - Framework de testes E2EJavaScript / Node.js - Linguagem e ambiente de execução
 
