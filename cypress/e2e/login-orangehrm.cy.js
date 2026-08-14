@@ -1,34 +1,31 @@
 describe('Orange HRM', () => {
 
+    const selectorList = {
+        usernameField : '[name="username"]',
+        passwordField : '[name="password"]',
+        loginButton : '.orangehrm-login-button',
+        sectionTitleTopBar : '.oxd-topbar-header-breadcrumb-module',
+        wrongCredentialAlert : "[role='alert']"
+    }
+
     it('Login - Sucess', () => {
 
-        cy.visit('/')// entrada padrao
-            .get('[name="username"]').type('Admin')
-            .get('[name="password"]').type('admin123')
-            .get('.orangehrm-login-button').click()
-
-            // Aguarda um texto indicando que abriu a página
-            cy.contains('Dashboard').should('be.visible')
-            // Espera uma outra url com pathname, indicando que fez login
-            cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-            
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')// entrada padrao
+            .get(selectorList.usernameField).type('Admin')
+            .get(selectorList.passwordField).type('admin123')
+            .get(selectorList.loginButton).click()
+            .location('pathname').should('equal', '/web/index.php/dashboard/index')
+            .get(selectorList.sectionTitleTopBar).contains('Dashboard')
             
             
 
     })
     it('Login - Fail', () => {
-        cy.visit('/')
-            .get('[name="username"]').type('test')
-            .get('[name="password"]').type('admin123')
-            .get('.orangehrm-login-button').click()
-
-            // Verifica se aparece a mensagem "Invalid credentials"
-            cy.get('.oxd-alert-content-text').contains('Invalid credentials')
-            
-            // Outra maneira de verificar se aparece a mensagem "Invalid credentials", 
-            // procurando somente pelo texto "Invalid credentials"
-            cy.contains('Invalid credentials').should('be.visible')
-
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+            .get(selectorList.usernameField).type('test')
+            .get(selectorList.passwordField).type('admin123')
+            .get(selectorList.loginButton).click()
+            .get(selectorList.wrongCredentialAlert)
 
 
     })
