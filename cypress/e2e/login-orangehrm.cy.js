@@ -1,4 +1,4 @@
-import userData from '..fixtures/users/userData.json'
+import userData from '../fixtures/userData.json'
 
 describe('Orange HRM', () => {
 
@@ -11,7 +11,7 @@ describe('Orange HRM', () => {
     }
 
 
-    it('Login - Sucess', () => {
+    it('Login - Success', () => {
 
         cy.visit('/web/index.php/auth/login')// entrada padrao
             .get(selectorList.usernameField).type(userData.userSucess.username)
