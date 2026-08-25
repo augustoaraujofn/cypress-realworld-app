@@ -23,7 +23,7 @@ describe('Orange HRM', () => {
     }
 
 
-    it.only('User Info Update - Success', () => {
+    it('User Info Update - Success', () => {
 
         cy.visit('/web/index.php/auth/login')// entrada padrão
             .get(selectorList.usernameField).type(userData.userSucess.username)
