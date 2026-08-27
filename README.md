@@ -46,10 +46,10 @@ Neste projeto estou aplicando conceitos de QA Automation, como:
 
 ### Login
 
-- [x] Login com credenciais válidas
-- [x] Login com usuário inválido
-- [x] Login com senha inválida
-- [x] Login sem usuário e senha
+- ✅ Login com credenciais válidas
+- ✅ Login com usuário inválido
+- ✅ Login com senha inválida
+- ✅ Login sem usuário e senha
 
 ### Cadastro
 
@@ -64,19 +64,19 @@ Os cenários serão adicionados conforme o desenvolvimento do projeto avançar.
 
 Pretendo continuar expandindo a suíte de testes com novos fluxos da aplicação.
 
-- [x] Criar estrutura inicial do projeto
-- [x] Criar Page Object para Login
-- [x] Criar massa de dados para Login
-- [x] Automatizar login válido
-- [x] Automatizar login com usuário inválido
-- [x] Automatizar login com senha inválida
-- [x] Automatizar login sem credenciais
-- [ ] Automatizar cadastro
-- [ ] Adicionar novos cenários negativos
-- [ ] Adicionar mais Page Objects
-- [ ] Adicionar evidências dos testes
-- [ ] Implementar execução em CI/CD
-- [ ] Adicionar relatório de testes
+- ✅ Criar estrutura inicial do projeto
+- ✅ Criar Page Object para Login
+- ✅ Criar massa de dados para Login
+- ✅ Automatizar login válido
+- ✅ Automatizar login com usuário inválido
+- ✅ Automatizar login com senha inválida
+- ✅ Automatizar login sem credenciais
+- ✅ Automatizar cadastro
+- ✅ Adicionar novos cenários negativos
+- ✅ Adicionar mais Page Objects
+- ✅ Adicionar evidências dos testes
+- ✅ Implementar execução em CI/CD
+- ✅ Adicionar relatório de testes
 
 ---
 
