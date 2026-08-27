@@ -64,19 +64,11 @@ Os cenários serão adicionados conforme o desenvolvimento do projeto avançar.
 
 Pretendo continuar expandindo a suíte de testes com novos fluxos da aplicação.
 
-- ✅ Criar estrutura inicial do projeto
-- ✅ Criar Page Object para Login
-- ✅ Criar massa de dados para Login
-- ✅ Automatizar login válido
-- ✅ Automatizar login com usuário inválido
-- ✅ Automatizar login com senha inválida
-- ✅ Automatizar login sem credenciais
-- ✅ Automatizar cadastro
-- ✅ Adicionar novos cenários negativos
-- ✅ Adicionar mais Page Objects
-- ✅ Adicionar evidências dos testes
-- ✅ Implementar execução em CI/CD
-- ✅ Adicionar relatório de testes
+- Automatizar cadastro
+- Adicionar novos cenários negativos
+- Adicionar mais Page Objects
+- Adicionar evidências dos testes
+- Adicionar relatório de testes
 
 ---
 
