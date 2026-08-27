@@ -35,8 +35,6 @@ Neste projeto estou aplicando conceitos de QA Automation, como:
 - Testes End-to-End
 - Page Object Model (POM)
 - Cenários positivos e negativos
-- Massa de dados para testes
-- Assertions
 - Organização dos testes
 - Git e GitHub
 
