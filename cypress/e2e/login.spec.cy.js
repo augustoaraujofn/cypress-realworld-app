@@ -5,21 +5,36 @@ import DashboardPage from '../pages/dashboard'
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
 
-describe('Orange HRM', () => {
+describe('Login', () => {
 
-    it('Login - Success', () => {
+  it('Login with valid credentials', () => {
+  
+    loginPage.accessLoginPage()
+    loginPage.loginUserSuccess(userData.userSuccess.username, userData.userSuccess.password)
 
-        loginPage.accessLoginPage()
-        loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
-        dashboardPage.checkDashboard()
+    dashboardPage.checkDashboard()
 
-        })
+  })
 
-    it('Login - Fail', () => {
+  it('Login with invalid username', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginUserFail(userData.userFail.username, userData.userSuccess.password)
 
-        loginPage.accessLoginPage()
-        loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
-        loginPage.checkAccessInvalid()
 
-      })
+
+  })
+
+   it('Login with invalid password', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginUserFail(userData.userSuccess.username, userData.userFail.password)
+
+
+
+  })
+
+  it('Login button should be disabled with empty credentials', () => {
+    loginPage.accessLoginPage()
+    loginPage.emptyLogin()
+})
+
 })

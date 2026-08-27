@@ -1,35 +1,42 @@
 class LoginPage {
 
     selectorList(){
-        
-        const selectors = {
-            usernameField : '[name="username"]',
-            passwordField : '[name="password"]',
-            loginButton : '.orangehrm-login-button',
-            wrongCredentialAlert : "[role='alert']"
-        }
 
-        return selectors
-
+    const selectors = {
+        usernameField: '[name="username"]',
+        passwordField : '[name="password"]',
+        signinSubmit : "[data-test='signin-submit']",
+        accessValid : '[data-test="sidenav"]',
+        signinErrorMessage : "[data-test='signin-error']",
+        usernameRequired : '#username-helper-text'
     }
 
-    accessLoginPage() {
+    return selectors
 
-        cy.visit('/web/index.php/auth/login')
-    }
+  }
 
-    loginWithUser(username,password){
+  accessLoginPage() {
+    cy.visit('http://localhost:3000')
+  }
 
-        cy.get(this.selectorList().usernameField).type(username)
-        cy.get(this.selectorList().passwordField).type(password)
-        cy.get(this.selectorList().loginButton).click()
-    }
+  loginUserSuccess(username, password){
+    cy.get(this.selectorList().usernameField).type(username)
+    cy.get(this.selectorList().passwordField).type(password)
+    cy.get(this.selectorList().signinSubmit).click()
+  }
 
-    checkAccessInvalid() {
+  loginUserFail(username, password){
+    cy.get(this.selectorList().usernameField).type(username)
+    cy.get(this.selectorList().passwordField).type(password)
+    cy.get(this.selectorList().signinSubmit).click()
+    cy.get(this.selectorList().signinErrorMessage)
+  }
 
-        cy.get(this.selectorList().wrongCredentialAlert)
-        
-    }
+  emptyLogin() {
+    cy.get(this.selectorList().signinSubmit).click()
+    cy.get(this.selectorList().usernameRequired)
 }
-// Se não fizer esse comando, você não consegue chamar em outras classes
-export default LoginPage 
+  
+}
+
+export default LoginPage
