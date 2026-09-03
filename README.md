@@ -74,146 +74,42 @@ A ideia é separar as ações da página dos cenários de teste, facilitando a *
 
 ---
 
-# 🚀 Como executar
+## 🚀 Como executar
 
-## 1. Pré-requisitos
+### Pré-requisitos
 
-Antes de executar o projeto, instale:
+* Node.js **22.x**
+* Yarn **1.22.22**
+* Cypress **15.x**
 
-| Tecnologia | Versão      |
-| ---------- | ----------- |
-| Node.js    | **22.x**    |
-| Yarn       | **1.22.22** |
-| Cypress    | **15.17.0** |
-
-### Node.js
-
-Se estiver utilizando **NVM for Windows**:
-
-```bash
-nvm install 22
-nvm use 22
-```
-
-Verifique:
-
-```bash
-node -v
-```
-
-Deve retornar algo como:
-
-```text
-v22.x.x
-```
-
-### Yarn
-
-Instale o Yarn Classic:
-
-```bash
-npm install -g yarn@1.22.22
-```
-
-Verifique:
-
-```bash
-yarn -v
-```
-
-Resultado esperado:
-
-```text
-1.22.22
-```
-
-> O Cypress é instalado automaticamente pelo projeto. Não é necessário instalar o Cypress globalmente.
-
----
-
-## 2. Clone o projeto
+### Instalação
 
 ```bash
 git clone https://github.com/augustoaraujofn/cypress-realworld-app.git
 cd cypress-realworld-app
-```
-
----
-
-## 3. Instale as dependências
-
-```bash
 yarn install
 ```
 
----
+### Executar os testes
 
-## 🧪 4. Execute os testes
-
-Para executar a aplicação e os testes E2E automaticamente:
+O comando abaixo inicia a aplicação e executa os testes E2E:
 
 ```bash
 yarn test:e2e
 ```
 
-Esse comando inicia a aplicação, aguarda o servidor ficar disponível e executa os testes Cypress.
+### Abrir o Cypress
 
-### 🖥️ Executar pelo Cypress
-
-Para abrir a interface do Cypress:
+Para executar os testes pela interface do Cypress:
 
 ```bash
 yarn cypress:open
 ```
 
-Depois, escolha o teste que deseja executar.
-
-> **Importante:** o comando `yarn cypress:open` requer que a aplicação esteja em execução.
-
----
-
-## 🔍 Verificar as versões
-
-Caso queira confirmar se o ambiente está configurado corretamente:
+Para executar pelo terminal:
 
 ```bash
-node -v
-yarn -v
-npx cypress version
+yarn cypress:run
 ```
 
-Ambiente esperado:
-
-```text
-Node.js: 22.x
-Yarn: 1.22.22
-Cypress: 15.17.0
-```
-
----
-
-## 📌 Resumo rápido
-
-Se o ambiente já estiver configurado, basta:
-
-```bash
-git clone https://github.com/augustoaraujofn/cypress-realworld-app.git
-cd cypress-realworld-app
-yarn install
-yarn test:e2e
-```
-
----
-
-## 📚 O que estou praticando
-
-* Testes End-to-End
-* Automação de interface
-* Page Object Model (POM)
-* Fixtures
-* Assertions
-* Cenários positivos e negativos
-* Reutilização de código
-* Organização e manutenção dos testes
-* Git e GitHub
-* Boas práticas de QA Automation
+> O Cypress já está configurado no projeto. Não é necessário instalá-lo globalmente.
